@@ -1,0 +1,152 @@
+/* =================================================_
+   Page de Réservation - Résidence Néhémie
+   ================================================= */
+
+.reservation-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* --- Section Hero --- */
+.reservation-hero {
+    position: relative;
+    padding: 160px 20px 100px;
+    background-color: #1a1a1a;
+    background-image: url('/img/Deux_Chambre_Salon/Espace_commun/5.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.reservation-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.65); */
+    z-index: 1;
+}
+
+.reservation-hero-content {
+    text-align: left;
+     margin: 12px 0 0;
+     
+    margin-left: 100px;
+    text-shadow: 0 8px 16px #000000;
+    color: rgba(255, 255, 255, 0.95);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Assurer la lisibilité du texte blanc par-dessus */
+ 
+
+
+.reservation-eyebrow {
+     margin: 12px 0 0;
+    text-shadow: 0 8px 16px #000000;
+    color: rgba(255, 255, 255, 0.95);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.reservation-hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.reservation-hero-content p {
+    font-size: 1.15rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Conteneur du Widget de Réservation --- */
+.reservation-widget-container {
+    max-width: 1200px;
+    margin: -40px auto 60px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .reservation-hero {
+        padding: 130px 15px 80px;
+    }
+
+    .reservation-hero-content h1 {
+        font-size: 2.1rem;
+    }
+
+    .reservation-hero-content p {
+        font-size: 1rem;
+    }
+}
+/* ============================================================
+   SECUREBOOKINGS
+   STICKY UNIQUEMENT AU SCROLL
+   ============================================================ */
+
+/*
+ * État normal :
+ *
+ * AUCUN position: fixed
+ * AUCUN top: 108px
+ *
+ * SecureBookings garde donc son comportement original.
+ */
+
+
+/*
+ * ------------------------------------------------------------
+ * FORMULAIRE UNE FOIS QUE LE SEUIL EST ATTEINT
+ * ------------------------------------------------------------
+ */
+
+#searchFilter.securebookings-is-sticky {
+    position: fixed !important;
+
+    top: 108px !important;
+
+    z-index: 99999 !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+
+/*
+ * ------------------------------------------------------------
+ * PLACEHOLDER
+ * ------------------------------------------------------------
+ *
+ * Lorsque #searchFilter devient fixed, il sort du flux.
+ * Le placeholder conserve donc son espace.
+ */
+
+.securebookings-sticky-placeholder {
+    display: block !important;
+
+    visibility: hidden !important;
+
+    pointer-events: none !important;
+
+    margin: 0 !important;
+}
